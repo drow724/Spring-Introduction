@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    MemberService memberService;
     MemoryMemberRepository memberRepository;
 
     @BeforeEach
@@ -25,7 +25,7 @@ class MemberServiceTest {
 
     @AfterEach
     public void afterEach() {
-        memoryMemberRepository.clearStore();
+        memberRepository.clearStore();
     }
     @Test
     void 회원가입() {
